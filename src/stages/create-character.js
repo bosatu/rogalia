@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 function createCharacterStage() {
     var account = document.createElement("div");
     account.className = "lobby-account";
@@ -82,6 +82,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Люди, создающие великолепные конструкции из древесины, которые всегда пользуются спросом у людей.",
                 en: "People who make a beautiful and robust carpentry everyone need.",
+                jp: "美しくて丈夫な品物を作る大工を人々の誰もが必要としている。",
             },
             skills: {
                 Carpentry: 10,
