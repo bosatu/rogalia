@@ -93,6 +93,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Повара Рогалии способны творить великолепные блюда из простых продуктов, которые будут не только райски вкусны, но и богаты витаминами, что так необходимы поселенцам в Новых Землях.",
                 en: "Rogalia's cooks make delicious meals, tasty, juicy and full of vitamins.",
+                jp: "ロガリアの料理人が作る料理は、ジューシーでおいしくビタミンがいっぱいです。",
             },
             skills: {
                 Cooking: 10,
@@ -104,6 +105,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Человек, знающий как выжить в дикой природе, найти себе ночлег и добыть еды. Ловкие и внимательные, в схватке с диким зверем выходят победителями.",
                 en: "A men who know how to survive the wild lands, find a safe place to sleep and food to eat. Careful and agile, they win every battle with the beast.",
+                jp: "自然においてサバイバル方法を知っている人は、慎重かつ迅速に安全な眠りと食べ物を見つける。そして彼らは獣との戦いあらゆる手段で勝つ。",
             },
             skills: {
                 Swordsmanship: 10,
