@@ -38,6 +38,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Куй железо, пока горячо! Кузнецы Рогалии создают инструменты, что так необходимы всем поселенцам: оружие, доспехи и множество прочих шедевров из металла!",
                 en: "Blacksmiths make tools every settler need: armor, gear and other brilliant masterpieces of smithy!",
+                jp: "鍛冶屋は、鎧、装備、そして鍛冶屋による華麗な装飾！",
             },
             skills: {
                 "Metalworking": 10,
@@ -49,6 +50,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Самая романтичная профессия в Империи. Портные создают не только великолепную одежду и изделия из ткани, но и пишут восхитительной красоты картины.",
                 en: "The most romantic job in the whole Empire. Tailors make majestic clothes and paint beautiful pictures.",
+                jp: "帝国全体で最もロマンチックな仕事。 テイラーは雄大な服を作り、美しい絵を描きます。", 	
             },
             skills: {
                 "Tailoring": 10,
@@ -60,6 +62,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Алхимики Рогалии — это люди, которых боятся и уважают все жители. Они способны управлять силой атомов, создавая гениальные изобретения, собирать сложные механизмы, а так же создавать магические свитки разрушительной мощи.",
                 en: "Almost everyone respects Rogalia's alchemists. These mighty people can control the atomic powers, invent ingenious machinery and enchant a magic scrolls of destructive power.",
+              	jp: "ほぼすべての人がロガリアの錬金術師を尊敬している。これらの力強い人々は原子を制御し、巧妙な機械を作り、破壊力のある魔法のスクロールで魅了する",
             },
             skills: {
                 Alchemy: 10,
@@ -70,7 +73,7 @@ function createCharacterStage() {
             name: "Farmer",
             desc: {
                 ru: "Главные поставщики продовольствия. Они выращивают все, что можно вырастить в Новых Землях. Бескрайние поля, долгий и упорный труд — вот ваше ремесло.",
-                en: "The primary food suppliers. They grow everything that grows in the New Lands. Hard and patient workers.",
+                en: "主要な食糧供給業者。 彼らはニューランドで成長するすべてを育てます。 ハードな労働者。",
             },
             skills: {
                 Farming: 10,
@@ -81,7 +84,7 @@ function createCharacterStage() {
             name: "Carpenter",
 	    desc: {
                 ru: "Люди, создающие великолепные конструкции из древесины, которые всегда пользуются спросом у людей.",
-                en: "People who make a beautiful and robust carpentry everyone need.",
+                en: "美しくて丈夫なアイテムを作る大工を人々のだれもが必要としている。",
             },
             skills: {
                 Carpentry: 10,
@@ -92,7 +95,8 @@ function createCharacterStage() {
             name: "Cook",
 	    desc: {
                 ru: "Повара Рогалии способны творить великолепные блюда из простых продуктов, которые будут не только райски вкусны, но и богаты витаминами, что так необходимы поселенцам в Новых Землях.",
-                en: "Rogalia's cooks make delicious meals, tasty, juicy and full of vitamins.",
+                en: "Rogalia's cooks make delicious meals, tasty, juicy and full of vitamins.
+                jp: "ロガリアの料理人が作る食事は、おいしくてジューシーでビタミンにあふれています。",",
             },
             skills: {
                 Cooking: 10,
@@ -104,6 +108,7 @@ function createCharacterStage() {
 	    desc: {
                 ru: "Человек, знающий как выжить в дикой природе, найти себе ночлег и добыть еды. Ловкие и внимательные, в схватке с диким зверем выходят победителями.",
                 en: "A men who know how to survive the wild lands, find a safe place to sleep and food to eat. Careful and agile, they win every battle with the beast.",
+                jp: "自然の地をサバイバルの方法を知っている人は、慎重かつ迅速に安全な眠りと食べ物を見つける。そうすることによって彼らは獣とのあらゆる戦いに勝利する.",
             },
             skills: {
                 Swordsmanship: 10,
@@ -132,7 +137,7 @@ function createCharacterStage() {
         var li = dom.wrap("profession hidden", [
             dom.wrap("", T(prof.name)),
             desc,
-            dom.make("p", T("Picking a profession gives you a little bonus of learning points. But you still can learn all the skills you need."))
+            dom.make("p", T("職業を選ぶことで、あなたに少しだけその職業のラーニングポイントのボーナスを与えます。 しかし、これ以外にもあなたが必要とするならば、すべてのスキルを学ぶことができます。"))
         ]);
 
         professions.appendChild(li);
