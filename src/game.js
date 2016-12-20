@@ -1,4 +1,4 @@
-/* global Settings, config, DragManager, Screen, debug, Sound, Loader, Menu, WorldMap, Controller, Network, HashTable, BinarySearchTree, Quests, Point, IsoDrawer, Popup, T, Panel, Jukebox, util, Stage, FONT_SIZE, localStorage, CELL_SIZE, sprintf */
+/* global Settings, config, DragManager, Screen, debug, Sound, Loader, Menu, WorldMap, Controller, Network, HashTable, BinarySearchTree, Quests, Point, IsoDrawer, Popup, T, Panel, Jukebox, util, Stage, FONT_SIZE, localStorage, CELL_SIZE, sprintf, Professions, dom */
 
 "use strict";
 
@@ -22,8 +22,8 @@ class Game {
 
         new DragManager();
 
+        this.fullscreen = JSON.parse(localStorage.getItem("fullscreen"));
         this.screen = new Screen();
-        this.ping = 0;
         this.time = 0;
         this.timeElement = document.getElementById("time");
 
@@ -56,8 +56,6 @@ class Game {
         this.missiles = [];
         this.containers = {};
         this.vendors = {};
-
-        this.quests = new Quests();
         this.panels = {};
         this.camera = new Point();
 
@@ -168,19 +166,23 @@ class Game {
         this.jukebox = new Jukebox();
 
         var maximize = document.getElementById("maximize");
-        if (game.args["steam"]) {
-            dom.hide(maximize);
-        } else {
-            maximize.onclick = function() {
-                maximize.classList.toggle("maximized");
+        maximize.onclick = function() {
+            maximize.classList.toggle("maximized");
+            if (game.args["steam"]) {
+                var gui = require("nw.gui");
+                var win = gui.Window.get();
+                win.toggleFullscreen();
+            } else {
                 util.toggleFullscreen();
-            };
-        }
+            }
+        };
 
         this.setFontSize();
 
         this.stage = new Stage();
         this.setStage("login");
+
+        this.professions = new Professions();
 
         window.onerror = function(msg, url, line, column) {
             window.onerror = null;
@@ -195,6 +197,15 @@ class Game {
             game.exit(T("Client error. Refresh page or try again later."));
             return false;
         };
+
+        if (game.args["steam"]) {
+            var gui = require("nw.gui");
+            var win = gui.Window.get();
+            win.on("new-win-policy", function(frame, url, policy) {
+                gui.Shell.openExternal(url);
+                policy.ignore();
+            });
+        }
 
         T.update();
         this._tick();
@@ -280,6 +291,17 @@ class Game {
         window.addEventListener("focus", () => { this.focus = true; });
         window.addEventListener("blur", () => { this.focus = false; });
 
+        if (game.args["steam"]) {
+            var gui = require("nw.gui");
+            var win = gui.Window.get();
+            // TODO check for double save from quit()
+            win.on("close", () => this.save());
+        }
+    }
+
+    quit() {
+        this.save();
+        require("nw.gui").App.quit();
     }
 
     update(currentTime) {
@@ -419,6 +441,12 @@ class Game {
             potential += fields[i].potentialAt(p.x, p.y);
         }
         return potential;
+    }
+
+    toggleFullscreen() {
+        this.fullscreen = !this.fullscreen;
+        this.screen.update();
+        localStorage.setItem("fullscreen", this.fullscreen);
     }
 
     exit(message) {
