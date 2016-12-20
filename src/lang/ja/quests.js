@@ -2,109 +2,111 @@
 
 Quest.quests =  {
     "tutorial-start": {
-        name: "Tutorial start",
+        name: "Tuition start",
+        voice: true,
         desc: [
-            "Hello, settler.",
-            "Everyone who arrives here gets my Academy. My job here is to teach you survival basics.",
+            "ようこそ、開拓者！",
+            "ここに訪れたすべての人が私のアカデミーを受講します。 私の仕事はサバイバルの基礎を教えることです。",
+            "報酬: <i>3000 exp と 4 gold</i>.",
         ],
-        final: "Great, let's begin. Remember: <i>wild beasts won't attack you 'till you get 10 level, and your bag will stay with you after death.</i>",
-    },
+        final: "素晴らしい！開始する前に覚えておいてください: <i>あなたが10レベルになるまで、敵対的な生物はあなたを攻撃しません。バッグは死体に残っているということを。</i>",    },
     "craft-1": {
-        name: "Picking resources",
-        desc: "You need some tools to survive this wild lands; and for tools you need resources. Pick four stones, two boughs and a branch.",
-        tip: "<rmb>Get bough</rmb> and <rmb>Get branch</rmb> on a tree.<br><lmb></lmb> on a stone to pick it up from the ground.",
-    },
-    "craft-1-2": {
-        name: "Making a knife handle",
-        desc: "Now make sticks from the boughs and twigs from the branches. We will use them to make a handle.",
-        tip: "<rmb>Break off</rmb> on a bough gives a stick, the same for a branch gives a twig.",
+        name: "リソースの採取",
+        voice: true,
+        desc: "この自然の地を生き残るためには道具が必要です。 道具にはリソースが必要です。 四つの石と二つの枝と小枝を選びなさい。",
+        tip: "木を右クリックしてください <rmb>枝/小枝を取る</rmb>. 取った枝を右クリックして<rmb>加工</rmb> すれば要らない葉が取れクラフトに使えるようになります, 石は地面から拾ってください。 <lmb></lmb>.",
     },
     "craft-2": {
-        name: "Making a knife blade",
-        desc: "The knife should has a blade. Try to make it from the sharp stones.",
-        tip: "<lmb></lmb> on the sharp stone icon.<br>Move stones into the recipe and press <hl>Create</hl>",
-    },
-    "craft-2-1": {
-        name:  "Making a knife",
-        desc: "Perfect, everything is ready. Finally let's make a knife",
-        tip: "To simplify things you can click on the <hl>Auto</hl> button and then <hl>Create</hl>",
+        voice: true,
+        name: "ナイフの作成",
+        desc: "用意はできました。 これらのリソースを使って、あなたはナイフを作成することができます。",
+        tip: "<lmb></lmb> クエストアイテムをクリックすると、クラフトダイアログが開き、レシピが見つかります。 <lmb></lmb> クラフトレシピから必要なリソースがわかります。",
     },
     "craft-3": {
-        name: "Making a weapon",
-        desc: "Good, now let's craft a sharp stick — your first weapon. You will need it later.",
+        voice: true,
+        name: "武器の作成",
+        desc: "さてと、私はあなたへ最初の武器である鋭いスティックをの作成を教えます。",
     },
     "stat-1": {
-        name: "Thirst",
-        desc: "Now I shall teach you how to obtain food and water.<br>Rip off some bark from a tree and make a mug. Then fill it with water. Don't worry, the water is clean here.",
-        tip: "Go into a water and <rmb>Fill</rmb> on a mug.<br><rmb>Drink</rmb> will increase your stamina.",
+        voice: true,
+        name:  "喉の渇き",
+        desc: "これから私は食べ物と水の取得方法を教えます。 次の部屋には小さな水源があります。 木から樹皮を剥がしてマグカップを作ってから、水源に立ち水を汲んでください。 心配しないでいいですよ、ここの水は奇麗ですから。",
+        tip: "<rmb>ドリンクを</rmb> 飲むことでスタミナは回復するでしょう、 <br>マグカップを満たすために浅瀬にいなければならない、<br>キャラクタのデータを取得するには、左上のアバターをクリックしてください。",
     },
     "stat-2": {
-        name: "Hunger",
-        desc: "It's the time to get some food and have it. Pick some apples from a tree. Be careful, don't eat more then you need, otherwise, food won't give you vitamins and you become very slow. By the way, if you've overate, use the toilet next to me.",
+        voice: true,
+        name: "空腹",
+        desc: "そろそろおなかが減ってくる頃じゃないですか？ ニワトリを殺してそれを刈り取ったり、木からリンゴをむしり取るのも自由です。ですが注意してください、必要以上に食べていまうと食料からビタミンの効力が発揮されません。 ステータスやスキルを向上させるためにはビタミンの効力が必要です。 もし食べ過ぎたのなら、私の隣にあるトイレを使いなさい。見たりしませんよ。",
+        tip: "ビタミンの量は \"Stats\" ダイアログに表示されます. スキルをそれに関連するステータスよりも上にすることはできません。  \"Skills\"　スキルレベルを上げるにはラーニング・ポイントを消費して習得します。",
     },
     "fight": {
-        name: "Fight and fighting combos",
-        desc: "Well, I see you prepared for your first fight.<br>Equip your sharp stick and hit a training dummy.",
-        tip: "Attack will follow the mouse pointer.<br>Skill buttons and hotkeys can be found in the bottom panel.",
+        voice: true,
+        name: "戦闘中のコンボ",
+        desc: "さてと、私はあなたへ最初の戦いの準備をしました。 次の部屋に戦闘訓練用のマネキンがあります。 右手にあなたの鋭い棒を持って、それを切ったり叩いたりしてください。",
+        tip: "右手（上）に鋭い棒を装備することです。 戦闘コマンドは画面左下にパネルでグループ分けされています。 例として3-2-1-1という戦闘コンボを使用した場合に最も効果を発揮します。 パネルの最大のボタンは、あなたが装備しているアイテムで可能なアクションを表示します。",
+    },
+    "dead": {
+        voice: true,
+        name: "死亡時",
+        desc: "すばらしいです！ あなたよりも強い敵を攻撃するか、攻撃的な獣が狙われた時、逃げきることができず、おそらく死ぬでしょう。 恐るべきことに死は、あなたのビタミン、ラーニングポイント、更に装備やアイテムのすべてを失うことを意味します。 あなたは自分が設置したスポーンストーンの隣に復活するか、あなたがそれを持っていなければ町で復活します。 戦闘に挑戦したい場合は、Diegoと話をすることです、彼は割安な料金で狩猟場に連れて行ってくれます。 それからアリーナでは特別に殺人の罰金なしで他の人々と戦うことができます。",
+
+    },
+    "claim": {
+        voice: true,
+        name: "所有地の主張",
+        desc: "誰でもあなたを攻撃することができます。 あなたの財産を維持するための拠点を建設する必要があります。  チャールズから8ゴールドの所有地のライセンスを得ることで盗まれたり攻撃されたりする恐れなしに建てて耕すことができる小さな土地を所有することができます。",
+        tip: "あなたアイテムを作成したり敵を撃退する時に経験値を取得し。 いくつかの敵から金を奪うことで町でアイテムを売買することもできます。",
     },
     "finish": {
-        name: "The end of tutorial",
-        desc: "Well, I did my job.",
-        final: "It's time to move to the town."
+        voice: true,
+        name: "これでチュートリアルは終了です。",
+        desc: "仕事も終わったことですし。 町に戻る時間です。",
     },
-    "tp-return-home": {
-        name: "Teleportation: return to home" ,
-        desc: "Are you interested in portals? I'll tell you about the ways you travel around the world.<br> While you're on the surface and under the Synode protection you can easily return to your homestead. I mean, to your respawn stone, if you built one, or to the town. Give it a try.",
-        "tip": "<rmb>Click on your picture (see left top part of the screen)</rmb> to return to your home.",
-    },
-    "tp-respawn": {
-        name: "Teleportation: respawn",
-        desc: "Town respawn stones are connected to your respawn stone.<br> You can travel using a respawn stone but its primary task is to ressurect you after death. When you build your own respawn stone you'll notice it's quite different from others.",
-        tip: "<lmb></lmb> the closest respawn."
-    },
-    "tp-scrolls": {
-        name: "Teleportation: scrolls",
-        desc: "Teleportation scrolls allow you to return to home from very dangerous places. They make a good help when you're exploring underground. <br> I'll give you a couple but you can buy or make them yourself.",
+    "in-city": {
+        voice: true,
+        name: "町へ",
+        desc: [
+            "町の周りを見てください。",
+                    "オークションをチェックして、そこで自分のアイテムを販売することや。銀行に口座を作り、お金を貯めて置いたりアイテムを預けたりすることができます。",
+                    "この町のパブでは、飲み物、食べ物、そしてチェスゲームを提供しています。ああ、ええ、マルゴを訪問してください、彼女は素晴らしいです。",
+                    "クラフトマンタウンでは、手に入れることができないものを買うことができます。教会は、銀行の近くにあります。アリーナは反対側にあります。",
+                    "また、あなたはランダムな自然の地に到達するポータルをあちこちで見かけるでしょう。 なにかあっても復活時にはこの町に戻れますよ、 とにかく幸あれ！",
+        ],
+        tip: "複数の復活地点を設置した場合は、どちらかの復活地点を選択します。 <rmb></rmb>復活地点を選択 \"Set the spawn\"",
     },
     "faction-daily-1": {
-        name: "Help your faction (daily)",
-        desc: "Increase your status within the faction",
+        name: "あなたの派閥を支援する(daily)",
+        desc: "派閥内のあなたの地位を上げる",
     },
     "garland-daily": {
-        name: "Garland (daily)",
-        desc: "Help Santa to make a garland",
+        name: "ガーランド (daily)",
+        desc: "サンタが花輪を作るのを助ける",
     },
     "chrismas-flags-daily": {
-        name: "Flags (daily)",
-        desc: "Help Santa to make some paper flags",
+        name: "フラグ (daily)",
+        desc: "サンタが旗を作るのを助ける",
     },
     "chrismas-decoration-daily-1": {
-        name: "Decoration (daily)",
-        desc: "Help Santa's daughter make some paper decorations",
+        name: "デコレーション (daily)",
+        desc: "サンタの紙で女の子の飾りを作るのを助ける",
     },
     "chrismas-decoration-daily-2": {
-        name: "Glass decoration (daily)",
-        desc: "Help Santa's daughter make some glass decorations",
+        name: "ガラス装飾 (daily)",
+        desc: "サンタのガラスで女の子の飾りを作るのを助ける",
     },
     "buy-small-indulgence": {
-        name: "Small indulgence",
-        desc: [
-            "You can always make a confession here.",
-        ],
-        customReward: "+100 Karma",
+        name: "小さな恩赦",
+        desc: "..",
+        customReward: "+100カルマ",
     },
     "buy-average-indulgence": {
-        name: "Average indulgence",
-        desc: [
-            "You can always make a confession here.",
-        ],
-        customReward: "+1000 Karma",
+        name: "恩赦",
+        desc: "..",
+        customReward: "+1000カルマ",
     },
     "buy-big-indulgence": {
-        name: "Big indulgence",
-        desc: [
-            "You can always make a confession here.",
-        ],
-        customReward: "+10000 Karma",
+        name: "大きな恩赦",
+        desc: "..",
+        customReward: "+10000カルマ",
     }
 };
