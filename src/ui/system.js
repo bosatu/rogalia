@@ -27,6 +27,10 @@ function System() {
         ]).show();
     };
 
+    this.update = function(ping) {
+        this.ping.textContent = "Ping: " + ping + "ms";
+    };
+
     this.panel = new Panel(
         "system",
         "System",
@@ -44,7 +48,7 @@ function System() {
                 dom.button(T("Change character"), "", game.reload)
                 : game.button.lobby(),
             game.args["steam"] ?
-                dom.button(T("Quit"), "", () => require("nw.gui").App.quit())
+                dom.button(T("Quit"), "", () => game.quit())
                 : dom.button(T("Logout"), "", game.reload),
         ]
     );

@@ -1,3 +1,5 @@
+/* global game, FormData, dom */
+
 "use strict";
 
 function loginStage() {
@@ -98,8 +100,10 @@ function loginStage() {
         }
 
         function startSignup() {
-            document.location.href = "http://store.steampowered.com/app/528460/";
-            return;
+            if (document.location.host == "rogalia.ru") {
+                document.location.href = "http://store.steampowered.com/app/528460/";
+                return;
+            }
             dom.show(email.label);
             dom.show(cancelSignupButton);
             dom.hide(signinButton);
@@ -111,6 +115,7 @@ function loginStage() {
 
     function signin(login, password) {
         game.setLogin(login);
+        game.clearServerInfo();
 
         var formData = new FormData();
         formData.append("login", login);
@@ -122,7 +127,6 @@ function loginStage() {
         req.onerror = onload;
         req.send(formData);
     }
-
 
     function fastLogin() {
         var server = game.loadServerInfo();
@@ -177,6 +181,7 @@ function loginStage() {
 
     function signup(login, password, email) {
         game.setLogin(login);
+        game.clearServerInfo();
 
         var formData = new FormData();
         formData.append("login", login);

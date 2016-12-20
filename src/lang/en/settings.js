@@ -44,7 +44,7 @@
             "Show items on minimap.",
         ],
         allowSelfSelection: [
-            "Charaster selection",
+            "Character selection",
             "Allows character selection and mouse interaction. Right button activates action.",
         ],
         showMeterValues: [
@@ -86,10 +86,6 @@
             "Space movement",
             "Enable space movement on the map edge.",
         ],
-        fullscreen: [
-            "Fullscreen",
-            "Enable fullscreen",
-        ],
         autoHideWalls: [
             "Auto hide walls",
             "Automatically hide walls inside buildings.",
@@ -102,6 +98,10 @@
             "Center screen",
             "If enabled, game area centers on screen center.",
             "If disabled, game area is placed on the left.",
+        ],
+        mapGrid: [
+            "Map grid",
+            "Draw map grid",
         ],
     },
     sound:  {
