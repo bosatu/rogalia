@@ -592,14 +592,6 @@ function Controller(game) {
     };
 
     this.initInterface = function() {
-        if (game.args["steam"]) {
-            var gui = require("nw.gui");
-            var win = gui.Window.get();
-            win.on("new-win-policy", function(frame, url, policy) {
-                gui.Shell.openExternal(url);
-                policy.ignore();
-            });
-        }
         game.map.minimapContainer.style.display = "block";
         game.timeElement.style.display = "block";
 
@@ -1283,5 +1275,9 @@ function Controller(game) {
         if (this.fight && config.ui.comboHelper) {
             this.fight.combo.sync(waza);
         }
+    };
+
+    this.updatePing = function(ping) {
+        this.system && this.system.update(ping);
     };
 };
