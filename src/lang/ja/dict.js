@@ -1,6 +1,8 @@
+﻿usestrict;
 
 T.dict={
 "Toequip":"Toequip",
+"claim-help-text":"土地の権利、主張領域を拡張すると、自動的に銀行口座から資金が引き出されます。 銀行では支払期間を確認することができます。 また、そこで1週間から3ヶ月の権利金を支払うこともできます。 ",
 "Wolfhungry":"ウルフ・ハングリー",
 "Spicedwolfmeat":"スパイシーなオオカミの肉",
 "Paprika":"パプリカ",
