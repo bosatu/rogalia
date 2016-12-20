@@ -531,7 +531,7 @@ T.dict={
 "Appletreestick":"アップルの木の棒",
 "Coppersaw":"銅のノコギリ",
 "Bakedchickenleg":"手羽先",
-"Cupboard":"食器棚",
+"Cupboard":"収納棚",
 "Caveentrance":"洞窟入り口",
 "Goldenore":"金の鉱石",
 "Titaniumsaw":"チタンのノコギリ",
